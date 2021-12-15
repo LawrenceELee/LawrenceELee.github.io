@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* Reset the font weight of everything so I can decide for each element */
+* {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 18px;
+  --brand-color: green;
+  --main-font: 'DM Sans', sans-serif;
+  --secondary-font: 'Libre Baskerville', serif;
+}
+
+/* My favorite CSS trick: give body a nice size and use rem (relative units wherever possible)*/
+body {
+  background-color: black;
+  color: var(--brand-color);
+  line-height: 1.4;
+  font-family: var(--main-font);
+  max-width: 960px;
+
+  /* css horizontal center!!!! */
+  margin: 2rem auto;
+
+  padding: 1rem;
+}
+
+nav {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* Need footer to go to the bottom of its parent! */
+footer {
+  position: fixed;
+  width: 100%;
+  max-width: 500px;
+  bottom: 0;
+  display: block;
+  padding: 1rem;
+}
+
+header p {
+  width: 100%;
+  max-width: 100%;
+}
+
+header h1 {
+  font-size: 1rem;
+}
+
+section {
+  margin-bottom: 4rem;
+  border: 1px dotted var(--brand-color);
+  padding: 2rem;
+}
+
+nav {
+  margin: 1rem 0;
+}
+p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+ul {
+  margin-left: 3rem;
+  list-style-type: none;
+}
+
+/* Margin is the space outside an element */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+h3 {
+  margin-top: 1rem;
+  font-family: var(--secondary-font);
+}
+
+/* baby steps for combining selectors - spaces means find second elem inside first */
+nav li {
+  display: inline;
+  padding: 0;
+  padding-left: 1rem;
+}
+
+nav a {
+  color: var(--brand-color);
+  text-decoration: none;
+  border: 1px solid var(--brand-color);
+  padding: 5px;
+}
+
+nav a:hover {
+
+}
+#projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+#skills ul li {
+  height: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 10%;
+  border: 1px solid var(--brand-color);
+}
+
+
+@media only screen and (max-width: 840px) {
+  .project-card {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+ nav {
+   display: flex;
+   flex-direction: column;
+ }
+ nav li {
+   padding: 0;
+   padding-right: 1rem;
+ }
+}
+
+@media only screen and (max-width: 500px) {
+ html {
+   font-size: 16px;
+ }
+ .project-card {
+   width: 100%;
+ }
+}

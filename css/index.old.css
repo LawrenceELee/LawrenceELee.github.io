@@ -1,0 +1,79 @@
+@media screen and (min-width: 480px) {
+
+
+	html {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+	
+		background-color: black;
+		font-family: "Times New Roman", Times, serif;
+		color: green;
+		padding: 1px;
+		margin: 1px;
+	}
+}
+
+header {
+    background-color: gray;
+    color: white;
+    padding: 1px;
+}
+
+body {
+    background-color: #f8f8ff;
+}
+
+section {
+
+}
+
+section ul {
+
+}
+
+a {
+
+}
+
+a:hover {
+ 
+}
+
+h2 {
+	color: orange;
+	font-size: 16pt;
+}
+
+
+button {
+    padding: 10px;
+    margin: 1px;
+    color: black;
+    border-radius: 10px;
+    border:1px solid black;
+}
+
+
+form label {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 1px;
+}
+
+ form input {
+    padding: 1px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+ }
+
+ form textarea {
+    padding: 1px;
+    margin-bottom: 1px;
+    margin-top: 1px;  
+ }
+ 
+footer {
+    background-color: pink;
+}
