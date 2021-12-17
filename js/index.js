@@ -5,7 +5,8 @@ let thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 //footer.innerHTML = thisYear;
 const copyright = document.createElement('p');
-copyright.innerHTML  = "&copy; Lawrence " + thisYear + "<br />" + "<a href='#top'>Top</a>";
+//copyright.innerHTML  = "&copy; Lawrence " + thisYear + "<br />" + "<a href='#top'>Top</a>";
+copyright.innerHTML  = "<a href='#top'>^Top^</a>";
 footer.appendChild(copyright);
 
 let skills = ["Javascript", "HTML", "CSS", "Java", "Python", "C", "Git", "Ruby", "Rails"];
