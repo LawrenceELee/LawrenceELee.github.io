@@ -2,15 +2,18 @@
 <html>
   
   <head>
-    <title>Lawrence&#39;s CTD portfolio</title>
+    <title>Lawrence Lee portfolio</title>
     <meta charset="UTF-8" />
     <meta name="description" content="CTD portfolio" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Lawrence" />
-    <link rel="stylesheet" href="css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&amp;display=swap" rel="stylesheet" />
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/index.css" />
   </head>
 
 
@@ -20,13 +23,13 @@
   	<!-- nav bar -->
     <header>
       <nav>
-        <a href="index.html">Lawrence Lee</a>
+        <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Lawrence Lee</a>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#connect">Connect</a></li>
+          <li><a href="#about"><i class="fa fa-user" aria-hidden="true"></i> About</a></li>
+          <li><a href="#experience"><i class="fa fa-laptop" aria-hidden="true"></i> Experience</a></li>
+          <li><a href="#skills"><i class="fa fa-wrench" aria-hidden="true"></i> Skills</a></li>
+          <li><a href="#projects"><i class="fa fa-file-code-o" aria-hidden="true"></i> Projects</a></li>
+          <li><a href="#connect"><i class="fa fa-envelope-o" aria-hidden="true"></i> Connect</a></li>
         </ul>
       </nav>
     </header>
@@ -63,7 +66,7 @@
       <h2>Connect</h2>
       <ul>
 		<!-- email using obfustication -->
-		<li>Email: 
+		<li id="connect-email">Email: 
 			<script language="JavaScript">user = 'none';site = 'example.com';document.write('<a href=\"mailto:' + user + '@' + site + '\">');document.write(user + ' [at] ' + site + '</a>');
 			</script>
 		</li>
@@ -101,16 +104,38 @@
     
 	<section id="messages">
       <h2>Messages</h2>
+	  <ul></ul>
     </section>
-    
+
+	<section id="copyright">
+		<p> © 2021 Lawrence </p>
+	</section>
+
+		
+		
 	<br />
     <br />
-    
+
+		
 
 	<footer>
+		<nav>
+			<ul class="menu" role="list">
+			    <li><a href="https://www.linkedin.com/in/lawrenceelee/"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+				<li><a href="https://github.com/LawrenceELee"><i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
+				<!--
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+				-->
+				<li id="footer-email"><a href="mailto:none@example.com?subject = Contacting via your portfolio website "><i class="fa fa-envelope" aria-hidden="true"></i> Email</a></li>
+
+				
+			</ul>
+		</nav>
 	</footer>
 	
 	<script src="js/index.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+
 
   </body>
 </html>

@@ -70,12 +70,17 @@ body {
   
   /* css horizontal center!!!! */
   margin: 2rem auto;
-
+ 
   font: var(--font-color);
 
 }
 
-nav {
+section {
+  border: 1px dotted var(--brand-color);
+  padding: 2rem;
+}
+
+header nav {
   margin-bottom: 4rem;
   display: flex;
   justify-content: space-around;
@@ -85,19 +90,44 @@ nav {
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
-
 }
 
+
+/* baby steps for combining selectors - spaces means find second elem inside first */
+nav li {
+  display: inline;
+  padding: 0;
+  padding-left: 1rem;
+}
+
+/* Links inside the navbar */
+nav a {
+/*  float: left; */
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+nav a:hover {
+  background: #ddd;
+  color: black;
+}
+
+
 /* Need footer to go to the bottom of its parent! */
+/* */
 footer {
   position: fixed;
-  width: 100%;
-  text-align: right;
-  /*max-width: 500px;*/
   bottom: 0;
-  /*display: block;*/
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(51, 51, 51, 0);
 }
 
 p {
@@ -112,11 +142,6 @@ header p {
 
 header h1 {
   font-size: 1rem;
-}
-
-section {
-  border: 1px dotted var(--brand-color);
-  padding: 2rem;
 }
 
 ul {
@@ -137,17 +162,10 @@ h3 {
   margin-top: 1rem;
 }
 
-/* baby steps for combining selectors - spaces means find second elem inside first */
-nav li {
-  display: inline;
-  padding: 0;
-  padding-left: 1rem;
-}
-
 a {
   color: var(--font-color);
   text-decoration: none;
-  border: 1px solid var(--brand-color);
+  /* border: 1px solid var(--brand-color); */
   padding: 5px;
 }
 
@@ -171,7 +189,25 @@ a:hover {
   border: 1px solid var(--brand-color);
 }
 
+#contact ul li {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
 
+}
+
+#copyright p {
+  text-align: center;
+}
+
+
+/* max-width is for screen with size with max and smaller */
 @media only screen and (max-width: 840px) {
   .project-card {
     width: 50%;
@@ -182,6 +218,8 @@ a:hover {
  nav {
    display: flex;
    flex-direction: column;
+   float: none;
+   display: block;
  }
  nav li {
    padding: 0;
@@ -193,7 +231,23 @@ a:hover {
  html {
    font-size: 16px;
  }
- .project-card {
-   width: 100%;
+ nav {
+   /* what's the difference between display:none vs. visibility:hidden? */
+   display: none;
+   visibility: hidden;
  }
 }
+
+
+/* for responsiveness, when windows is too small, then just show the icons and not the words */
+
+
+
+/* min-width is from screens with size at least min and larger */
+/*
+@media screen and (min-width: 400px) {
+   header, footer {
+     display: none;
+   }
+}
+*/

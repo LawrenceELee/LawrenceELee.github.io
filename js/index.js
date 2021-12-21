@@ -2,12 +2,14 @@
 let today = new Date();
 let thisYear = today.getFullYear();
 
+/*
 const footer = document.querySelector('footer');
 //footer.innerHTML = thisYear;
 const copyright = document.createElement('p');
 //copyright.innerHTML  = "&copy; Lawrence " + thisYear + "<br />" + "<a href='#top'>Top</a>";
 copyright.innerHTML  = "<a href='#top'>^Top^</a>";
 footer.appendChild(copyright);
+*/
 
 let skills = ["Javascript", "HTML", "CSS", "Java", "Python", "C", "Git", "Ruby", "Rails"];
 const skillsSection = document.querySelector('#skills');
@@ -46,7 +48,8 @@ messageForm.addEventListener("submit", (e) => {
 	console.log(`name: ${name}, email: ${email}, message: ${message}`);
 	//console.log(`event: ${event}`);
 
-	let messageSection = document.getElementById("messages");
+	//let messageSection = document.getElementById("messages");
+	let messageSection = document.querySelector('#messages')
 	let messageList = messageSection.querySelector('ul');
 	
 	let newMessage = document.createElement('li');
@@ -126,6 +129,15 @@ function displayGithubData( repositories ){
 				
 	}
 }
+
+function hideEmail(){
+  let parts = ["function", "example", "com", "&#46;", "&#64;"];
+  let email = parts[0] + parts[4] + parts[1] + parts[3] + parts[2];
+  document.querySelector('#connect').querySelector('#connect-email').innerHTML = "Email: " + email;
+  
+  //document.querySelector('footer').querySelector('#footer-email').innerHTML = email;
+}
+hideEmail();
 
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
