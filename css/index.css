@@ -122,12 +122,22 @@ footer {
   bottom: 0;
   width: 100%;
   padding: 0.5rem 0rem 0.5rem 0rem;
+  margin: auto;
   
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: baseline;
 
-  background-color: rgba(51, 51, 51, 0);
+  background-color: rgba(51, 51, 51, 1);
+}
+
+footer nav {
+	width: 75%;
+	align-items: center;
+	/*border: 1px dotted var(--brand-color);*/
+}
+footer p {
+  /*border: 1px dotted var(--brand-color);*/
 }
 
 p {
@@ -173,6 +183,21 @@ a:hover {
 	color: blue;
 }
 
+#avatar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#welcome {
+	display: flex;
+	justify-content: center;
+}
+
+img {
+	border-radius: 50%;
+}
+
 #projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -204,6 +229,46 @@ a:hover {
 
 #copyright p {
   text-align: center;
+}
+
+/* styles the whole rating div/section */
+.rating {
+   position: relative;
+   width: 180px;
+   background: transparent;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: .3em;
+   padding: 5px;
+   overflow: hidden;
+   border-radius: 20px;
+   box-shadow: 0 0 2px #b3acac;
+}
+
+/* styles the border and number around all the stars */
+.rating__result {
+   position: absolute;
+   top: 0;
+   left: 0;
+   transform: translateY(-10px) translateX(-5px);
+   z-index: -9;
+   font: 3em Arial, Helvetica, sans-serif;
+   color: #ebebeb8e;
+   pointer-events: none;
+}
+
+/* styling for each star */
+.rating__star {
+   font-size: 1.3em;
+   cursor: pointer;
+   color: #dabd18b2;
+   transition: filter linear .3s;
+}
+
+/* glows when you hove mouse over */
+.rating__star:hover {
+   filter: drop-shadow(1px 1px 4px white);
 }
 
 

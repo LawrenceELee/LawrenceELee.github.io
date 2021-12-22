@@ -2,14 +2,57 @@
 let today = new Date();
 let thisYear = today.getFullYear();
 
-/*
+
 const footer = document.querySelector('footer');
-//footer.innerHTML = thisYear;
 const copyright = document.createElement('p');
-//copyright.innerHTML  = "&copy; Lawrence " + thisYear + "<br />" + "<a href='#top'>Top</a>";
-copyright.innerHTML  = "<a href='#top'>^Top^</a>";
+copyright.innerHTML  = "&copy;" + thisYear + " Lawrence";
+//copyright.innerHTML  = "<a href='#top'>^Top^</a>";
 footer.appendChild(copyright);
+
+
+
+/*
 */
+let fruits = ['apple', 'orange', 'banana'];
+
+// Get the app element
+let testDiv = document.querySelector('#test');
+
+// Create markup
+testDiv.innerHTML = '<ul>' + fruits.map(function (fruit) {
+	return '<li>' + fruit + '</li>';
+}).join('') + '</ul>';
+
+
+const ratingStars = [...document.getElementsByClassName("fa fa-star-o")];
+const ratingResult = document.querySelector(".rating__result");
+printRatingResult(ratingResult);
+function executeRating(stars, result) {
+   const starClassActive = "fa fa-star";
+   const starClassUnactive = "fa fa-star-o";
+   const starsLength = stars.length;
+   let i;
+   stars.map((star) => {
+      star.onclick = () => {
+         i = stars.indexOf(star);
+
+         if (star.className.indexOf(starClassUnactive) !== -1) {
+            printRatingResult(result, i + 1);
+            for (i; i >= 0; --i) stars[i].className = starClassActive;
+         } else {
+            printRatingResult(result, i);
+            for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
+         }
+      };
+   });
+}
+
+function printRatingResult(result, num = 0) {
+   result.textContent = `${num}/5`;
+}
+executeRating(ratingStars, ratingResult);
+
+
 
 let skills = ["Javascript", "HTML", "CSS", "Java", "Python", "C", "Git", "Ruby", "Rails"];
 const skillsSection = document.querySelector('#skills');
@@ -131,7 +174,7 @@ function displayGithubData( repositories ){
 }
 
 function hideEmail(){
-  let parts = ["function", "example", "com", "&#46;", "&#64;"];
+  let parts = ["spamblock", "example", "com", "&#46;", "&#64;"];
   let email = parts[0] + parts[4] + parts[1] + parts[3] + parts[2];
   document.querySelector('#connect').querySelector('#connect-email').innerHTML = "Email: " + email;
   
