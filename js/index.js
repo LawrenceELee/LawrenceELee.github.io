@@ -10,19 +10,7 @@ copyright.innerHTML  = "&copy;" + thisYear + " Lawrence";
 footer.appendChild(copyright);
 
 
-
 /*
-*/
-let fruits = ['apple', 'orange', 'banana'];
-
-// Get the app element
-let testDiv = document.querySelector('#test');
-
-// Create markup
-testDiv.innerHTML = '<ul>' + fruits.map(function (fruit) {
-	return '<li>' + fruit + '</li>';
-}).join('') + '</ul>';
-
 
 const ratingStars = [...document.getElementsByClassName("fa fa-star-o")];
 const ratingResult = document.querySelector(".rating__result");
@@ -52,6 +40,22 @@ function printRatingResult(result, num = 0) {
 }
 executeRating(ratingStars, ratingResult);
 
+*/
+
+
+
+/*
+
+let fruits = ['apple', 'orange', 'banana'];
+
+// Get the app element
+let testDiv = document.querySelector('#test');
+
+// Create markup
+testDiv.innerHTML = '<ul>' + fruits.map(function (fruit) {
+	return '<li>' + fruit + '</li>';
+}).join('') + '</ul>';
+*/
 
 
 let skills = ["Javascript", "HTML", "CSS", "Java", "Python", "C", "Git", "Ruby", "Rails"];
