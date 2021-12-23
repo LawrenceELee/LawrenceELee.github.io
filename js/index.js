@@ -44,6 +44,8 @@ executeRating(ratingStars, ratingResult);
 
 
 
+
+
 /*
 
 let fruits = ['apple', 'orange', 'banana'];
